@@ -1,5 +1,5 @@
-@echo off
-::: ŽÀs‘O‚Ì€”õ
+ï»¿@echo off
+::: å®Ÿè¡Œå‰ã®æº–å‚™
 set EXEC_DIR=%~dp0
 
 ::: python
