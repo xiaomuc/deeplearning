@@ -17,6 +17,11 @@ def liner(a,b,x):
 def calcb(a,x1,y1):
     return y1 - a*x1
 
+def tangential(f,x,at_x):
+    d = numerical_diff(f,at_x)
+    b = f(at_x) - d * at_x
+    return x * d + b
+
 def main():
     x = np.arange(0.0, 20.0, 0.1)
     y = function_1(x)
@@ -24,8 +29,10 @@ def main():
     plt.xlabel("x")
     plt.ylabel("f(x)")
     plt.plot(x, y)
-    d1=numerical_diff(function_1,5))
-    d2=numerical_diff(function_1,10))
+    y1=tangential(function_1,x,5)
+    plt.plot(x,y1)
+    y2=tangential(function_1,x,10)
+    plt.plot(x,y2)
     plt.show()
 
 if __name__ == '__main__':
